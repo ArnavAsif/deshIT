@@ -1,6 +1,6 @@
 "use client";
 
-import { productsData, projectsData } from "@/assets/assets";
+import { productsData } from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 import { motion } from "motion/react";
@@ -52,7 +52,7 @@ const cardVariants = {
 // Helper to split text into animated letters
 const AnimatedHeading = ({ text }) => (
   <motion.h1
-    className="text-[30px] md:text-[40px] font-bold mb-[13px] flex justify-center leading-11"
+    className="text-[30px] md:text-[40px] font-bold mb-[13px] flex justify-center leading-11 text-[#020F40]"
     variants={headingContainer}
     initial="hidden"
     animate="visible"

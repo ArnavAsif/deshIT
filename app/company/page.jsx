@@ -23,7 +23,7 @@ const letterVariant = {
 };
 const AnimatedHeading = ({ text }) => (
   <motion.h1
-    className="text-[30px] md:text-[40px] font-bold mb-[13px] flex justify-center leading-11"
+    className="text-[30px] md:text-[40px] font-bold mb-[13px] flex justify-center leading-11 text-[#020F40]"
     variants={headingContainer}
     initial="hidden"
     animate="visible"
@@ -41,7 +41,7 @@ const AnimatedHeading = ({ text }) => (
 );
 const MissionHeading = ({ text }) => (
   <motion.h1
-    className="text-[70px] font-bold mb-[13px] flex justify-center leading-11"
+    className="text-[70px] font-bold mb-[13px] flex justify-center leading-11 text-[#020F40]"
     variants={headingContainer}
     initial="hidden"
     animate="visible"
@@ -79,7 +79,7 @@ const lottieVariants = {
 
 const AnimatedHeader = ({ text }) => (
   <motion.h1
-    className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0C1E3A] mb-6 leading-[72px]"
+    className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0C1E3A] mb-6 leading-[72px] "
     variants={headingContainer}
     initial="hidden"
     animate="visible"
