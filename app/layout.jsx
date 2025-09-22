@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${roboto.variable} ${poppins.variable} scroll-smooth`}
     >
-      <body className="antialiased bg-white">
+      <body className="antialiased bg-white text-[#020F40]">
         <Navbar />
         {children}
         <Footer />

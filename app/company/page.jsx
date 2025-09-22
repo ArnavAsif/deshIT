@@ -41,7 +41,25 @@ const AnimatedHeading = ({ text }) => (
 );
 const MissionHeading = ({ text }) => (
   <motion.h1
-    className="text-[70px] font-bold mb-[13px] flex justify-center leading-11 text-[#020F40]"
+    className="sm:text-[50px] lg:text-[70px] font-bold mb-[13px] flex justify-center leading-11 text-[#020F40]"
+    variants={headingContainer}
+    initial="hidden"
+    animate="visible"
+  >
+    {text.split("").map((char, index) => (
+      <motion.span
+        key={index}
+        variants={letterVariant}
+        className="inline-block"
+      >
+        {char === " " ? "\u00A0" : char}
+      </motion.span>
+    ))}
+  </motion.h1>
+);
+const WorkHeading = ({ text }) => (
+  <motion.h1
+    className="text-[40px] lg:text-6xl font-bold mb-[13px] flex justify-center leading-[72px]"
     variants={headingContainer}
     initial="hidden"
     animate="visible"
@@ -172,6 +190,25 @@ const Company = () => {
           </div>
         </div>
       </section>
+      {/* how we work */}
+      <div className="bg-gradient-to-r from-[#FA7470] to-[#FA9370]">
+        <div className="max-w-7xl px-4 md:w-10/12 mx-auto text-white py-[60px] flex flex-col justify-center items-center">
+          <WorkHeading text="How We Work" />
+          <p className="text-base md:text-lg leading-[35px] text-center lg:text-justify my-8">
+            We believe in agile development. We manage our projects by following
+            Scrum, the most popular widely practiced agile approach. Delivering
+            working applications on budget, and on time is always our concern
+            and Scrum enables us to manage our projects in such a way. Scope of
+            flexibility and collaboration enable us to manage the resources
+            effectively and deliver the quality product.
+          </p>
+          <div className="flex justify-center items-center">
+            <button className="py-[9px] px-[42px] rounded-[60px] border-2 border-transparent bg-white text-[#FA7470] cursor-pointer hover:border-2 font-medium hover:border-white hover:bg-transparent hover:text-white transition-all duration-500">
+              Free Consultation
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
